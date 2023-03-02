@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: " Gill Sans ", " Gill Sans MT ", Calibri, " Trebuchet MS", "sans-serif";
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: aliceblue;
+  margin: 5px;
+  padding: 20px;
+}
+
+.box{
+  padding: 30px 20px;
+  margin: 12px 3px;
+  border-radius: 5px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .9);
+}
+
+.box1 {
+  background-color: rgb(228, 123, 228);
+}
+
+.box2 {
+  background-color: rgb(197, 189, 189);
+}
+
+.box4 {
+  background-color: rgb(53, 170, 170);
+}
+
+.box3,
+.box5 {
+  background-color: #eee;
+}
+
+.box2,.box3{
+  height: 40%;
+}
+
+.box1,
+.box4{
+  height: 60%;
+}
+
+
+/* ==== MEDIA SCREEN ==== */
+
+/* MEDIA SCREEN >= 768PX  */
+@media screen and (min-width:768px) {
+  main{
+    padding-left: 5rem;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    grid-template-areas: 
+    "topcontent topcontent topcontent"
+    "ads content menu"
+    "footer footer footer";
+    grid-template-columns: 1fr, 2fr, 1fr;
+  }
+
+  .box4{
+    margin-top: 25px;
+  }
+
+  .box5{
+    width: 65%;
+    margin-left: 10px;
+  }
+
+  .container{
+    padding: 0 10px;
+  }
+}
+
+/* MEDIA SCREENS >= 912PX */
+@media screen and (min-width: 820px) {
+  main{
+    height: 100vh;
+    padding-top: 10rem;
+  }
+  
+  .box5{
+    height: 101%;
+  }
+  
+}
+
+/* MEDIA SCREENS >= 1024PX */
+@media screen and (min-width: 1024px) {
+  main{
+    padding-top: 0;
+  }
+  
+}
